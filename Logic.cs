@@ -46,6 +46,8 @@ namespace SpeechToTextWPFSample
                 for (int i = 0; i < players.Length; i++)
                 {
                     Console.Write("Enter player " + (i + 1) + " name: ");
+                    //TTSSample.Program.sayThis("Enter player " + (i + 1) + " name");
+                    
                     String name = names[i];
 
                     Console.Write("Enter player " + (i + 1) + " token: ");
@@ -56,7 +58,7 @@ namespace SpeechToTextWPFSample
                 }
 
                 Console.Write("\n\n\t\t\tLet the game start...\n\n");
-
+                TTSSample.Program.sayThis("Let the battle commence!");
                 // Loop the game as long as the board is not full, and there is no winner yet
                 // This loop corresponds to one game
                 while (!g.isFull() && !winner)
@@ -72,9 +74,9 @@ namespace SpeechToTextWPFSample
                         Console.WriteLine(g);
 
                         Console.Write("\nEnter spot to mark: ");
-
+                        TTSSample.Program.sayThis(players[i].getName()+"\'s turn");
                         //listen to tha talk
-                        while(message==null)
+                        while (message==null)
                         {
 
                         }
@@ -106,6 +108,7 @@ namespace SpeechToTextWPFSample
                         {
                             Console.WriteLine(g);
                             Console.WriteLine(players[i].getName() + " is the winner!");
+                            TTSSample.Program.sayThis(players[i].getName() + " is the winner!");
                             winner = true;
                             answer = "n";
                             break;

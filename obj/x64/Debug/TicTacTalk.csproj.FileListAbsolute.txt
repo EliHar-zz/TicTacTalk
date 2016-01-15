@@ -7,7 +7,6 @@ C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\obj\x64\Debug\SpeechTo
 C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\objd\amd64\SpeechToText-WPF-Sample.exe.config
 C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\objd\amd64\SpeechToText-WPF-Sample.exe
 C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\objd\amd64\SpeechToText-WPF-Sample.pdb
-C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\objd\amd64\Microsoft.QualityTools.Testing.Fakes.dll
 C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\objd\amd64\TTS.dll
 C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\objd\amd64\TTS.pdb
 C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\obj\x64\Debug\SpeechToText-WPF-Sample.exe

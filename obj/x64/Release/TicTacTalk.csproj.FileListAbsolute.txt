@@ -1,0 +1,6 @@
+C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\obj\x64\Release\TicTacTalk.csprojResolveAssemblyReference.cache
+C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\obj\x64\Release\MainWindow.baml
+C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\obj\x64\Release\MainWindow.g.cs
+C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\obj\x64\Release\App.g.cs
+C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\obj\x64\Release\SpeechToText-WPF-Sample_MarkupCompile.cache
+C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\obj\x64\Release\SpeechToText-WPF-Sample.g.resources

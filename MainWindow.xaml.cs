@@ -96,11 +96,6 @@ namespace MicrosoftProjectOxfordExample
 
         #endregion Events
 
-        //******************************************************************************************************************
-        //*****************************************************************************************************************
-        //******************************************************************************************************************
-
-
         /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class.
         /// </summary>
@@ -158,7 +153,7 @@ namespace MicrosoftProjectOxfordExample
 
         private void LogRecognitionStart(string recoSource, string recoLanguage, SpeechRecognitionMode recoMode)
         {
-            WriteLine("\n--- Start speech recognition using " + recoSource + " with " + recoMode + " mode in " + recoLanguage + " language ----\n\n");
+           // WriteLine("\n--- Start speech recognition using " + recoSource + " with " + recoMode + " mode in " + recoLanguage + " language ----\n\n");
         }
 
         MicrophoneRecognitionClient CreateMicrophoneRecoClient(SpeechRecognitionMode recoMode, string language, string subscriptionKey)
@@ -182,7 +177,7 @@ namespace MicrosoftProjectOxfordExample
 
         MicrophoneRecognitionClient CreateMicrophoneRecoClientWithIntent(string recoLanguage)
         {
-            WriteLine("--- Start microphone dictation with Intent detection ----");
+           // WriteLine("--- Start microphone dictation with Intent detection ----");
 
             MicrophoneRecognitionClientWithIntent intentMicClient =
                 SpeechRecognitionServiceFactory.CreateMicrophoneClientWithIntent(recoLanguage,
@@ -296,7 +291,7 @@ namespace MicrosoftProjectOxfordExample
         {
             Dispatcher.Invoke((Action)(() =>
             {
-                WriteLine("--- OnMicShortPhraseResponseReceivedHandler ---");
+               // WriteLine("--- OnMicShortPhraseResponseReceivedHandler ---");
 
                 _FinalResponseEvent.Set();
 
@@ -320,7 +315,7 @@ namespace MicrosoftProjectOxfordExample
         {
             Dispatcher.Invoke((Action)(() =>
             {
-                WriteLine("--- OnDataShortPhraseResponseReceivedHandler ---");
+               // WriteLine("--- OnDataShortPhraseResponseReceivedHandler ---");
                 // we got the final result, so it we can end the mic reco.  No need to do this
                 // for dataReco, since we already called endAudio() on it as soon as we were done
                 // sending all the data.
@@ -336,7 +331,7 @@ namespace MicrosoftProjectOxfordExample
 
             if (e.PhraseResponse.Results.Length == 0)
             {
-                WriteLine("I didn't hear you...");
+               //// WriteLine("I didn't hear you...");
                 openMic();
             }
             else
@@ -348,7 +343,7 @@ namespace MicrosoftProjectOxfordExample
                     if (e.PhraseResponse.Results[i].Confidence == Microsoft.ProjectOxford.SpeechRecognition.Confidence.High || e.PhraseResponse.Results[i].Confidence == Microsoft.ProjectOxford.SpeechRecognition.Confidence.Normal)
                     {
                         speechResult = e.PhraseResponse.Results[i].DisplayText;
-                        Console.WriteLine(speechResult);
+                        // Console.WriteLine(speechResult);
 
                         String mess = checkMessage(speechResult);
                         Console.WriteLine(mess + "   $$$$$$");
@@ -367,13 +362,13 @@ namespace MicrosoftProjectOxfordExample
                     }
                     else
                     {
-                        Console.WriteLine("Say again...");
+                        // Console.WriteLine("Say again...");
                         TTSSample.Program.sayThis("Please repeat your move.");
                         openMic();
                         break;
                     }
                 }
-                WriteLine();
+               // WriteLine();
             }
         }
         
@@ -382,7 +377,7 @@ namespace MicrosoftProjectOxfordExample
         /// </summary>
         void OnMicDictationResponseReceivedHandler(object sender, SpeechResponseEventArgs e)
         {
-            WriteLine("--- OnMicDictationResponseReceivedHandler ---");
+           // WriteLine("--- OnMicDictationResponseReceivedHandler ---");
             if (e.PhraseResponse.RecognitionStatus == RecognitionStatus.EndOfDictation ||
                 e.PhraseResponse.RecognitionStatus == RecognitionStatus.DictationEndSilenceTimeout)
             {
@@ -408,7 +403,7 @@ namespace MicrosoftProjectOxfordExample
         /// </summary>
         void OnDataDictationResponseReceivedHandler(object sender, SpeechResponseEventArgs e)
         {
-            WriteLine("--- OnDataDictationResponseReceivedHandler ---");
+           // WriteLine("--- OnDataDictationResponseReceivedHandler ---");
             if (e.PhraseResponse.RecognitionStatus == RecognitionStatus.EndOfDictation ||
                 e.PhraseResponse.RecognitionStatus == RecognitionStatus.DictationEndSilenceTimeout)
             {
@@ -430,9 +425,9 @@ namespace MicrosoftProjectOxfordExample
         /// </summary>
         void OnIntentHandler(object sender, SpeechIntentEventArgs e)
         {
-            WriteLine("--- Intent received by OnIntentHandler() ---");
-            WriteLine("{0}", e.Payload);
-            WriteLine();
+           // WriteLine("--- Intent received by OnIntentHandler() ---");
+           // WriteLine("{0}", e.Payload);
+           // WriteLine();
         }
 
         /// <summary>
@@ -440,9 +435,9 @@ namespace MicrosoftProjectOxfordExample
         /// </summary>
         void OnPartialResponseReceivedHandler(object sender, PartialSpeechResponseEventArgs e)
         {
-            WriteLine("--- Partial result received by OnPartialResponseReceivedHandler() ---");
-            WriteLine("{0}", e.PartialResult);
-            WriteLine();
+           // WriteLine("--- Partial result received by OnPartialResponseReceivedHandler() ---");
+           // WriteLine("{0}", e.PartialResult);
+           // WriteLine();
         }
 
         /// <summary>
@@ -450,10 +445,10 @@ namespace MicrosoftProjectOxfordExample
         /// </summary>
         void OnConversationErrorHandler(object sender, SpeechErrorEventArgs e)
         {
-            WriteLine("--- Error received by OnConversationErrorHandler() ---");
-            WriteLine("Error code: {0}", e.SpeechErrorCode.ToString());
-            WriteLine("Error text: {0}", e.SpeechErrorText);
-            WriteLine();
+           // WriteLine("--- Error received by OnConversationErrorHandler() ---");
+           // WriteLine("Error code: {0}", e.SpeechErrorCode.ToString());
+           // WriteLine("Error text: {0}", e.SpeechErrorText);
+           // WriteLine();
         }
 
         /// <summary>
@@ -463,13 +458,13 @@ namespace MicrosoftProjectOxfordExample
         {
             Dispatcher.Invoke(() =>
             {
-                WriteLine("--- Microphone status change received by OnMicrophoneStatus() ---");
-                WriteLine("********* Microphone status: {0} *********", e.Recording);
+               // WriteLine("--- Microphone status change received by OnMicrophoneStatus() ---");
+               // WriteLine("********* Microphone status: {0} *********", e.Recording);
                 if (e.Recording)
                 {
-                    WriteLine("Please start speaking.");
+                   // WriteLine("Please start speaking.");
                 }
-                WriteLine();
+               // WriteLine();
             });
         }
 
@@ -479,7 +474,7 @@ namespace MicrosoftProjectOxfordExample
         /// </summary>
         void WriteLine()
         {
-            WriteLine(string.Empty);
+           // WriteLine(string.Empty);
         }
 
         /// <summary>
@@ -515,6 +510,7 @@ namespace MicrosoftProjectOxfordExample
         private string checkMessage(String mess)
         {
             mess = mess.ToLower();
+            Console.WriteLine(mess);
             switch (mess)
             {
                 case "a1.":

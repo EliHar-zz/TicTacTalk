@@ -1,0 +1,4 @@
+C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\TTS\bin\Release\TTS.dll
+C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\TTS\bin\Release\TTS.pdb
+C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\TTS\obj\Release\TTS.dll
+C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\TTS\obj\Release\TTS.pdb
