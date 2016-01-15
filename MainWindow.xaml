@@ -35,19 +35,19 @@
             <TextBox HorizontalAlignment="Left" x:Name="sideRow1" Height="199" VerticalAlignment="Top" Text="A" FontSize="20" FontWeight="Bold" TextAlignment="Center" Width="46" Margin="-54,0,0,0" Background="#FF110101" Foreground="White" IsReadOnly="True"/>
             <TextBox HorizontalAlignment="Left" x:Name="sideRow2" Height="190" VerticalAlignment="Top" Text="B" FontSize="20" FontWeight="Bold" TextAlignment="Center" Width="46" Margin="-54,0.667,0,0" Background="#FF110101" Foreground="White" Grid.Row="1"/> -->
 
-            <TextBox HorizontalAlignment="Left" x:Name="A1" Height="199" Margin="10,0,0,0" VerticalAlignment="Top" Text="" FontSize="150" TextAlignment="Center" Width="195"/>
-            <TextBox HorizontalAlignment="Left" x:Name="A2" Height="199" Margin="10,0,0,0" VerticalAlignment="Top" Width="204" Text="" FontSize="150" TextAlignment="Center" Grid.Column="1"/>
-            <TextBox HorizontalAlignment="Left" x:Name="A3" Height="199" Margin="10,0,0,0" VerticalAlignment="Top" Width="204" Text="" FontSize="150" TextAlignment="Center" Grid.Column="2"/>
-            <TextBox HorizontalAlignment="Left" x:Name="B3" Height="190" Margin="10,0.667,0,0" VerticalAlignment="Top" Width="204" Text="" FontSize="150" TextAlignment="Center" Grid.Column="2" Grid.Row="1"/>
-            <TextBox HorizontalAlignment="Left" x:Name="B2" Height="199" Margin="9.667,0.667,0,0" VerticalAlignment="Top" Width="204" Text="" FontSize="150" TextAlignment="Center" Grid.Column="1" Grid.Row="1"/>
-            <TextBox HorizontalAlignment="Left" x:Name="B1" Height="199" Margin="10,0.667,0,0" VerticalAlignment="Top" Width="195"  Text="" FontSize="150" TextAlignment="Center" Grid.Row="1"/>
-            <TextBox HorizontalAlignment="Left" x:Name="C1" Height="199" Margin="10,9.333,0,0" VerticalAlignment="Top" Width="195" Text="" FontSize="150" TextAlignment="Center" Grid.Row="2"/>
-            <TextBox HorizontalAlignment="Left" x:Name="C2" Height="194" Margin="10.667,9.333,0,0" VerticalAlignment="Top" Width="204" Text="" FontSize="150" TextAlignment="Center" Grid.Row="2" Grid.Column="1"/>
-            <TextBox HorizontalAlignment="Left" x:Name="C3" Height="194" Margin="10,12.333,0,0" VerticalAlignment="Top" Width="204" Text="" FontSize="150" TextAlignment="Center" Grid.Row="2" Grid.Column="2"/>
+            <TextBox HorizontalAlignment="Left" x:Name="A1" Height="199" Margin="10,0,0,0" VerticalAlignment="Top" Text="" FontSize="150" TextAlignment="Center" Width="195" IsReadOnly="True"/>
+            <TextBox HorizontalAlignment="Left" x:Name="A2" Height="199" Margin="10,0,0,0" VerticalAlignment="Top" Width="204" Text="" FontSize="150" TextAlignment="Center" Grid.Column="1" IsReadOnly="True"/>
+            <TextBox HorizontalAlignment="Left" x:Name="A3" Height="199" Margin="10,0,0,0" VerticalAlignment="Top" Width="204" Text="" FontSize="150" TextAlignment="Center" Grid.Column="2" IsReadOnly="True"/>
+            <TextBox HorizontalAlignment="Left" x:Name="B3" Height="190" Margin="10,0.667,0,0" VerticalAlignment="Top" Width="204" Text="" FontSize="150" TextAlignment="Center" Grid.Column="2" Grid.Row="1" IsReadOnly="True"/>
+            <TextBox HorizontalAlignment="Left" x:Name="B2" Height="199" Margin="9.667,0.667,0,0" VerticalAlignment="Top" Width="204" Text="" FontSize="150" TextAlignment="Center" Grid.Column="1" Grid.Row="1" IsReadOnly="True"/>
+            <TextBox HorizontalAlignment="Left" x:Name="B1" Height="199" Margin="10,0.667,0,0" VerticalAlignment="Top" Width="195"  Text="" FontSize="150" TextAlignment="Center" Grid.Row="1" IsReadOnly="True"/>
+            <TextBox HorizontalAlignment="Left" x:Name="C1" Height="199" Margin="10,9.333,0,0" VerticalAlignment="Top" Width="195" Text="" FontSize="150" TextAlignment="Center" Grid.Row="2" IsReadOnly="True"/>
+            <TextBox HorizontalAlignment="Left" x:Name="C2" Height="194" Margin="10.667,9.333,0,0" VerticalAlignment="Top" Width="204" Text="" FontSize="150" TextAlignment="Center" Grid.Row="2" Grid.Column="1" IsReadOnly="True"/>
+            <TextBox HorizontalAlignment="Left" x:Name="C3" Height="194" Margin="10,12.333,0,0" VerticalAlignment="Top" Width="204" Text="" FontSize="150" TextAlignment="Center" Grid.Row="2" Grid.Column="2" IsReadOnly="True"/>
 
         </Grid>
 
-        <TextBox x:Name="title" Height="31" VerticalAlignment="Top" Text="Tic...Tac (wait for it) TALK" FontSize="20" FontWeight="Bold" TextAlignment="Center" Margin="0,30,0,0" Background="#FF110101" Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox x:Name="title" BorderThickness="0" Height="52" VerticalAlignment="Top" Text="Tic-Tac-TALK" FontSize="40" FontWeight="Bold" TextAlignment="Center" Margin="0,16,-1.333,0" Background="Chartreuse" Foreground="Purple" RenderTransformOrigin="0.5,0.5" IsReadOnly="True"/>
 
     </Grid>
 </Window>

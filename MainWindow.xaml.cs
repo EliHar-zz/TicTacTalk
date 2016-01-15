@@ -106,7 +106,7 @@ namespace MicrosoftProjectOxfordExample
             InitializeComponent();
             //Intialize();
 
-            SubscriptionKey = "b296eb666a2f48c6bbcecb602f26e3c1";
+            SubscriptionKey = "f16b93bb66c54d04939c7d9f8152517a";
             // Short phrase recongition using microphone
 
             openMic();
@@ -332,6 +332,7 @@ namespace MicrosoftProjectOxfordExample
             if (Logic.justSpoke == true)
             {
                 Logic.justSpoke = false;
+                //Monitor.Wait(anotherOne);
                 return;
             }
                
@@ -345,6 +346,7 @@ namespace MicrosoftProjectOxfordExample
                 for (int i = 0; i < e.PhraseResponse.Results.Length; i++)
                 {
                     speechResult = e.PhraseResponse.Results[i].DisplayText;
+                    speechResult = speechResult.Substring(0, speechResult.Length - 1);
                     Console.WriteLine(speechResult);
                 }
                     Logic.player1 = e.PhraseResponse.Results[0].DisplayText;
@@ -355,6 +357,7 @@ namespace MicrosoftProjectOxfordExample
                 for (int i = 0; i < e.PhraseResponse.Results.Length; i++)
                 {
                     speechResult = e.PhraseResponse.Results[i].DisplayText;
+                    speechResult = speechResult.Substring(0, speechResult.Length - 1);
                     Console.WriteLine(speechResult);
                 }
                 Logic.player2 = e.PhraseResponse.Results[0].DisplayText;

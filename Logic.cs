@@ -43,13 +43,13 @@ namespace SpeechToTextWPFSample
 
 
             TTSSample.Program.sayThis("who is Player One?");
-            //justSpoke = true;
+            justSpoke = true;
             while(player1==null)
             {
 
             }
             TTSSample.Program.sayThis("who is Player Two?");
-            //justSpoke = true;
+            justSpoke = true;
             while (player2 == null)
             {
 
@@ -131,11 +131,11 @@ namespace SpeechToTextWPFSample
                         //call pop-up from here
                         if (Application.Current.Dispatcher.CheckAccess())
                         {
-                            MessageBox.Show("Congratulations " + players[i].getName() + " !!", "AWWWWW YEAHHHHHH");
+                            MessageBox.Show("Congratulations " + players[i].getName().Replace(".", "") + " !!", "AWWWWW YEAHHHHHH");
                         }
                         else {
                             Application.Current.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Normal, new Action(() => {
-                                MessageBox.Show("Congratulations " + players[i].getName() + " !!", "AWWWWW YEAHHHHHH");
+                                MessageBox.Show("Congratulations " + players[i].getName().Replace(".", "") + " !!", "AWWWWW YEAHHHHHH");
                             }));
                         }
 

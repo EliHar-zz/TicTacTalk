@@ -493,7 +493,7 @@ namespace TTSSample
             AccessTokenInfo token;
 
             // Note: Sign up at http://www.projectoxford.ai for the client credentials.
-            Authentication auth = new Authentication("Your ClientId goes here", "69a16576ebe6433baa31a87c256867cc");
+            Authentication auth = new Authentication("Your ClientId goes here", "f16b93bb66c54d04939c7d9f8152517a");
 
             try
             {
