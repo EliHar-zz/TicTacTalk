@@ -9,7 +9,7 @@ namespace SpeechToTextWPFSample
 {
     class Logic
     {
-        public static String message = null;
+        public static String message = null, player1=null, player2=null;
         public static char currentToken;
         public static Boolean justSpoke = false;
         public void DoWork()
@@ -23,7 +23,8 @@ namespace SpeechToTextWPFSample
             Console.Write("\t\t\t======================\n\n");
             Console.Write("\t\t\tWelcome to Tic-Tac-Toe\n\n");
             Console.Write("\t\t\t======================\n\n");
-
+            TTSSample.Program.sayThis("Welcome to Tic Tac Talk!");
+            justSpoke = true;
             int size; // declare a variable to hold the board size
             Game g; // declare a game object
             Player[] players; // declare array of players
@@ -40,24 +41,38 @@ namespace SpeechToTextWPFSample
             // initialize and array of players using the default number of players
             players = new Player[numPlayers];
 
+
+            TTSSample.Program.sayThis("who is Player One?");
+            //justSpoke = true;
+            while(player1==null)
+            {
+
+            }
+            TTSSample.Program.sayThis("who is Player Two?");
+            //justSpoke = true;
+            while (player2 == null)
+            {
+
+            }
             // a bool variable to keep indicate if there is a winner or not
             winner = false;
             char[] tokens = { 'X', 'O' };
             string[] names = { "Player One", "Player Two" };
-            for (int i = 0; i < players.Length; i++)
-            {
-                Console.Write("Enter player " + (i + 1) + " name: ");
-                //TTSSample.Program.sayThis("Enter player " + (i + 1) + " name");
+            //for (int i = 0; i < players.Length; i++)
+            //{
+            //    Console.Write("Enter player " + (i + 1) + " name: ");
+            //    //TTSSample.Program.sayThis("Enter player " + (i + 1) + " name");
                     
-                String name = names[i];
+            //    String name = names[i];
 
-                Console.Write("Enter player " + (i + 1) + " token: ");
-                char token = tokens[i];
-                players[i] = new Player(name, token);
+            //    Console.Write("Enter player " + (i + 1) + " token: ");
+            //    char token = tokens[i];
+            //    players[i] = new Player(name, token);
 
-                Console.Write("\n");
-            }
-
+            //    Console.Write("\n");
+            //}
+            players[0] = new Player(player1, tokens[0]);
+            players[1] = new Player(player2, tokens[1]);
             Console.Write("\n\n\t\t\tLet the game start...\n\n");
               
             TTSSample.Program.sayThis("Let the battle commence!");

@@ -328,6 +328,7 @@ namespace MicrosoftProjectOxfordExample
 
         private void WriteResponseResult(SpeechResponseEventArgs e)
         {
+           // speechResult = e.PhraseResponse.Results[0].DisplayText;
             if (Logic.justSpoke == true)
             {
                 Logic.justSpoke = false;
@@ -338,6 +339,26 @@ namespace MicrosoftProjectOxfordExample
             {
                 //// WriteLine("I didn't hear you...");
                 openMic();
+            }
+            else if (Logic.player1 == null)
+            {
+                for (int i = 0; i < e.PhraseResponse.Results.Length; i++)
+                {
+                    speechResult = e.PhraseResponse.Results[i].DisplayText;
+                    Console.WriteLine(speechResult);
+                }
+                    Logic.player1 = e.PhraseResponse.Results[0].DisplayText;
+                return;
+            }
+            else if (Logic.player2 == null)
+            {
+                for (int i = 0; i < e.PhraseResponse.Results.Length; i++)
+                {
+                    speechResult = e.PhraseResponse.Results[i].DisplayText;
+                    Console.WriteLine(speechResult);
+                }
+                Logic.player2 = e.PhraseResponse.Results[0].DisplayText;
+                return;
             }
             else
             {
