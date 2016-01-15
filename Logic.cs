@@ -30,116 +30,113 @@ namespace SpeechToTextWPFSample
 
             // to start the game, assume the user answer is YES (ie. 'Y')
             // This loop corresponds to the whole program running
-            String answer = "Y";
-            while (answer == "Y")
+                        
+            size = 3;
+
+            // create a game with the size given by the user
+            g = new Game(size);
+
+            // initialize and array of players using the default number of players
+            players = new Player[numPlayers];
+
+            // a bool variable to keep indicate if there is a winner or not
+            winner = false;
+            char[] tokens = { 'X', 'O' };
+            string[] names = { "Elias", "Chris" };
+            for (int i = 0; i < players.Length; i++)
             {
-                size = 3;
+                Console.Write("Enter player " + (i + 1) + " name: ");
+                //TTSSample.Program.sayThis("Enter player " + (i + 1) + " name");
+                    
+                String name = names[i];
 
-                // create a game with the size given by the user
-                g = new Game(size);
+                Console.Write("Enter player " + (i + 1) + " token: ");
+                char token = tokens[i];
+                players[i] = new Player(name, token);
 
-                // initialize and array of players using the default number of players
-                players = new Player[numPlayers];
+                Console.Write("\n");
+            }
 
-                // a bool variable to keep indicate if there is a winner or not
-                winner = false;
-                char[] tokens = { 'X', 'O' };
-                string[] names = { "Elias", "Chris" };
+            Console.Write("\n\n\t\t\tLet the game start...\n\n");
+            TTSSample.Program.sayThis("Let the battle commence!");
+            // Loop the game as long as the board is not full, and there is no winner yet
+            // This loop corresponds to one game
+            while (!g.isFull() && !winner)
+            {
+                    
+                // loop through the array of players to give turns
                 for (int i = 0; i < players.Length; i++)
                 {
-                    Console.Write("Enter player " + (i + 1) + " name: ");
-                    //TTSSample.Program.sayThis("Enter player " + (i + 1) + " name");
-                    
-                    String name = names[i];
+                    currentToken = players[i].gettoken();
+                    if (g.isFull())
+                        break;
+                    message = null;
+                    Console.WriteLine(g);
 
-                    Console.Write("Enter player " + (i + 1) + " token: ");
-                    char token = tokens[i];
-                    players[i] = new Player(name, token);
-
-                    Console.Write("\n");
-                }
-
-                Console.Write("\n\n\t\t\tLet the game start...\n\n");
-                TTSSample.Program.sayThis("Let the battle commence!");
-                // Loop the game as long as the board is not full, and there is no winner yet
-                // This loop corresponds to one game
-                while (!g.isFull() && !winner)
-                {
-                    
-                    // loop through the array of players to give turns
-                    for (int i = 0; i < players.Length; i++)
+                    Console.Write("\nEnter spot to mark: ");
+                    TTSSample.Program.sayThis(players[i].getName()+"\'s turn");
+                    //listen to tha talk
+                    while (message==null)
                     {
-                        currentToken = players[i].gettoken();
-                        if (g.isFull())
-                            break;
-                        message = null;
-                        Console.WriteLine(g);
 
-                        Console.Write("\nEnter spot to mark: ");
-                        TTSSample.Program.sayThis(players[i].getName()+"\'s turn");
-                        //listen to tha talk
-                        while (message==null)
+                    }
+
+                    string location = ""; // ********** entry via mic
+
+                    //Console.Write("\n");
+
+
+
+                    bool isMarked = players[i].mark(g, message);
+
+                    // While the spot is not marked due to a pre-existing token
+                    while (!isMarked)
+                    {
+                        // Console.Write("\nEnter spot to mark: ");
+
+                        location = ""; // ********** entry via mic
+
+                        //Console.Write("\n");
+
+                        isMarked = players[i].mark(g, "A1");
+
+                        // Console.Write("\n");
+                    }
+
+                    // Once the player has marked a spot, check if they won
+                    if (g.didWin(players[i].gettoken()))
+                    {
+                        //Console.WriteLine(g);
+                        // Console.WriteLine(players[i].getName() + " is the winner!");
+                        TTSSample.Program.sayThis(players[i].getName() + " is the winner!");
+
+                        //call pop-up from here
+                        if (Application.Current.Dispatcher.CheckAccess())
                         {
-
+                            MessageBox.Show("Congratulations " + players[i].getName() + " !!", "AWWWWW YEAHHHHHH");
                         }
-
-                        string location = ""; // ********** entry via mic
-
-                        Console.Write("\n");
-
-
-
-                        bool isMarked = players[i].mark(g, message);
-
-                        // While the spot is not marked due to a pre-existing token
-                        while (!isMarked)
-                        {
-                            Console.Write("\nEnter spot to mark: ");
-
-                            location = ""; // ********** entry via mic
-
-                            Console.Write("\n");
-
-                            isMarked = players[i].mark(g, "A1");
-
-                            Console.Write("\n");
-                        }
-
-                        // Once the player has marked a spot, check if they won
-                        if (g.didWin(players[i].gettoken()))
-                        {
-                            Console.WriteLine(g);
-                            Console.WriteLine(players[i].getName() + " is the winner!");
-
-                            //call pop-up from here
-                            if (Application.Current.Dispatcher.CheckAccess())
-                            {
+                        else {
+                            Application.Current.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Normal, new Action(() => {
                                 MessageBox.Show("Congratulations " + players[i].getName() + " !!", "AWWWWW YEAHHHHHH");
-                            }
-                            else {
-                                Application.Current.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Normal, new Action(() => {
-                                    MessageBox.Show("Congratulations " + players[i].getName() + " !!", "AWWWWW YEAHHHHHH");
-                                }));
-                            }
-
-                            TTSSample.Program.sayThis(players[i].getName() + " is the winner!");
-                            winner = true;
-                            answer = "n";
-                            break;
+                            }));
                         }
+
+                        winner = true;
+                        break;
                     }
                 }
-                if (g.isFull() && !winner)
-                {
-                    Console.Write("It's a draw! Intense competition\n\n");
-                }
-                Console.Write("Would you like to play again (Y/N)?");
-
-                winner = false;
             }
-            Console.Write("\n\nHope to see you again...");
+            if (g.isFull() && !winner)
+            {
+                // Console.Write("It's a draw! Intense competition\n\n");
+                TTSSample.Program.sayThis("It's a draw! Intense competition.");
+            }
+            // Console.Write("Would you like to play again (Y/N)?");
 
-            //*********************** LOGIC ENDS
+            winner = false;
+            TTSSample.Program.sayThis("Hope to see you again...");
+
+        //*********************** LOGIC ENDS
         }
 
         public static void setMessage(String s)
