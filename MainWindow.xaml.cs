@@ -331,44 +331,32 @@ namespace MicrosoftProjectOxfordExample
 
             if (e.PhraseResponse.Results.Length == 0)
             {
-               //// WriteLine("I didn't hear you...");
+                //// WriteLine("I didn't hear you...");
                 openMic();
             }
             else
             {
-                // Take action upon getting input 
-
+                // Take action upon getting input
+                String mess = null;
                 for (int i = 0; i < e.PhraseResponse.Results.Length; i++)
                 {
-                    if (e.PhraseResponse.Results[i].Confidence == Microsoft.ProjectOxford.SpeechRecognition.Confidence.High || e.PhraseResponse.Results[i].Confidence == Microsoft.ProjectOxford.SpeechRecognition.Confidence.Normal)
-                    {
-                        speechResult = e.PhraseResponse.Results[i].DisplayText;
-                        // Console.WriteLine(speechResult);
+                    speechResult = e.PhraseResponse.Results[i].DisplayText;
+                    // Console.WriteLine(speechResult);
 
-                        String mess = checkMessage(speechResult);
-                        Console.WriteLine(mess + "   $$$$$$");
-                        if (mess != null)
-                        {
-                            //notify logicc dat we gots ze word
-                            Logic.setMessage(mess);
-                            //Thread.Sleep(2000);
-                            break;
-                        }
-                        else
-                        {
-                            TTSSample.Program.sayThis("Please repeat your move.");
-                            break;
-                        }
-                    }
-                    else
+                    mess = checkMessage(speechResult);
+                    Console.WriteLine(mess + "   $$$$$$");
+                    if (mess != null)
                     {
-                        // Console.WriteLine("Say again...");
-                        TTSSample.Program.sayThis("Please repeat your move.");
-                        openMic();
+                        //notify logicc dat we gots ze word
+                        Logic.setMessage(mess);
                         break;
                     }
                 }
-               // WriteLine();
+
+                if (mess != null)
+                {
+                    // WriteLine();
+                }
             }
         }
         
@@ -510,76 +498,33 @@ namespace MicrosoftProjectOxfordExample
         private string checkMessage(String mess)
         {
             mess = mess.ToLower();
-            Console.WriteLine(mess);
             switch (mess)
             {
-                case "a1.":
-                case "a 1.":
-                case "a one.":
+                case "top left.":
                     markSpot("A1", Logic.currentToken);
                     return "a1";
-                case "a2.":
-                case "a 2.":
-                case "a two.":
+                case "top.":
                     markSpot("A2", Logic.currentToken);
                     return "a2";
-                case "a3.":
-                case "a 3.":
-                case "a three.":
+                case "top right.":
                     markSpot("A3", Logic.currentToken);
                     return "a3";
-                case "b1.":
-                case "b 1.":
-                case "b one.":
-                case "be 1.":
-                case "be one.":
-                case "bee 1.":
-                case "bee one.":
+                case "left.":
                     markSpot("B1", Logic.currentToken);
                     return "b1";
-                case "b2.":
-                case "b 2.":
-                case "b two.":
-                case "be 2.":
-                case "be two.":
-                case "bee 2.":
-                case "bee two.":
+                case "middle.":
                     markSpot("B2", Logic.currentToken);
                     return "b2";
-                case "b3.":
-                case "b 3.":
-                case "b three.":
-                case "be 3.":
-                case "be three.":
-                case "bee 3.":
-                case "bee three.":
+                case "right.":
                     markSpot("B3", Logic.currentToken);
                     return "b3";
-                case "c1.":
-                case "c 1.":
-                case "c one.":
-                case "see 1.":
-                case "see one.":
-                case "sea 1.":
-                case "sea one.":
+                case "bottom left.":
                     markSpot("C1", Logic.currentToken);
                     return "c1";
-                case "c2.":
-                case "c 2.":
-                case "c two.":
-                case "see 2.":
-                case "see two.":
-                case "sea 2.":
-                case "sea two.":
+                case "bottom.":
                     markSpot("C2", Logic.currentToken);
                     return "c2";
-                case "c3.":
-                case "c 3.":
-                case "c three.":
-                case "see 3.":
-                case "see three.":
-                case "sea 3.":
-                case "sea three.":
+                case "bottom right.":
                     markSpot("C3", Logic.currentToken);
                     return "c3";
             }

@@ -11,3 +11,16 @@ C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\objd\amd64\TTS.dll
 C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\objd\amd64\TTS.pdb
 C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\obj\x64\Debug\SpeechToText-WPF-Sample.exe
 C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\obj\x64\Debug\SpeechToText-WPF-Sample.pdb
+C:\Users\t-elharo\Documents\TicTacTalk\objd\amd64\SpeechToText-WPF-Sample.exe.config
+C:\Users\t-elharo\Documents\TicTacTalk\obj\x64\Debug\SpeechToText-WPF-Sample.exe
+C:\Users\t-elharo\Documents\TicTacTalk\obj\x64\Debug\SpeechToText-WPF-Sample.pdb
+C:\Users\t-elharo\Documents\TicTacTalk\objd\amd64\SpeechToText-WPF-Sample.exe
+C:\Users\t-elharo\Documents\TicTacTalk\objd\amd64\SpeechToText-WPF-Sample.pdb
+C:\Users\t-elharo\Documents\TicTacTalk\objd\amd64\TTS.dll
+C:\Users\t-elharo\Documents\TicTacTalk\objd\amd64\TTS.pdb
+C:\Users\t-elharo\Documents\TicTacTalk\obj\x64\Debug\TicTacTalk.csprojResolveAssemblyReference.cache
+C:\Users\t-elharo\Documents\TicTacTalk\obj\x64\Debug\MainWindow.baml
+C:\Users\t-elharo\Documents\TicTacTalk\obj\x64\Debug\MainWindow.g.cs
+C:\Users\t-elharo\Documents\TicTacTalk\obj\x64\Debug\App.g.cs
+C:\Users\t-elharo\Documents\TicTacTalk\obj\x64\Debug\SpeechToText-WPF-Sample_MarkupCompile.cache
+C:\Users\t-elharo\Documents\TicTacTalk\obj\x64\Debug\SpeechToText-WPF-Sample.g.resources

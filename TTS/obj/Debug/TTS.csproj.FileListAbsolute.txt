@@ -3,3 +3,8 @@ C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\TTS\bin\Debug\TTS.pdb
 C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\TTS\obj\Debug\TTS.dll
 C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\TTS\obj\Debug\TTS.pdb
 C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\TTS\obj\Debug\TTS.csprojResolveAssemblyReference.cache
+C:\Users\t-elharo\Documents\TicTacTalk\TTS\bin\Debug\TTS.dll
+C:\Users\t-elharo\Documents\TicTacTalk\TTS\bin\Debug\TTS.pdb
+C:\Users\t-elharo\Documents\TicTacTalk\TTS\obj\Debug\TTS.csprojResolveAssemblyReference.cache
+C:\Users\t-elharo\Documents\TicTacTalk\TTS\obj\Debug\TTS.dll
+C:\Users\t-elharo\Documents\TicTacTalk\TTS\obj\Debug\TTS.pdb
