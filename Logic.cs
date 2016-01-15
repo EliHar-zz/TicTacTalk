@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace SpeechToTextWPFSample
 {
@@ -12,6 +13,7 @@ namespace SpeechToTextWPFSample
         public static char currentToken;
         public void DoWork()
         {
+
             //*********************** LOGIC STARTS
 
             const int numPlayers = 2; // default number of players is 2
@@ -108,6 +110,18 @@ namespace SpeechToTextWPFSample
                         {
                             Console.WriteLine(g);
                             Console.WriteLine(players[i].getName() + " is the winner!");
+
+                            //call pop-up from here
+                            if (Application.Current.Dispatcher.CheckAccess())
+                            {
+                                MessageBox.Show("Congratulations " + players[i].getName() + " !!", "AWWWWW YEAHHHHHH");
+                            }
+                            else {
+                                Application.Current.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Normal, new Action(() => {
+                                    MessageBox.Show("Congratulations " + players[i].getName() + " !!", "AWWWWW YEAHHHHHH");
+                                }));
+                            }
+
                             TTSSample.Program.sayThis(players[i].getName() + " is the winner!");
                             winner = true;
                             answer = "n";
