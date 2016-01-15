@@ -42,7 +42,7 @@ namespace SpeechToTextWPFSample
             // a bool variable to keep indicate if there is a winner or not
             winner = false;
             char[] tokens = { 'X', 'O' };
-            string[] names = { "Elias", "Chris" };
+            string[] names = { "Player One", "Player Two" };
             for (int i = 0; i < players.Length; i++)
             {
                 Console.Write("Enter player " + (i + 1) + " name: ");
@@ -58,6 +58,7 @@ namespace SpeechToTextWPFSample
             }
 
             Console.Write("\n\n\t\t\tLet the game start...\n\n");
+              
             TTSSample.Program.sayThis("Let the battle commence!");
             // Loop the game as long as the board is not full, and there is no winner yet
             // This loop corresponds to one game
@@ -135,7 +136,7 @@ namespace SpeechToTextWPFSample
 
             winner = false;
             TTSSample.Program.sayThis("Hope to see you again...");
-
+            Environment.Exit(0);
         //*********************** LOGIC ENDS
         }
 

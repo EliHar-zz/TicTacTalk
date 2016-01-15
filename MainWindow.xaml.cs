@@ -341,6 +341,7 @@ namespace MicrosoftProjectOxfordExample
                 for (int i = 0; i < e.PhraseResponse.Results.Length; i++)
                 {
                     speechResult = e.PhraseResponse.Results[i].DisplayText;
+                    Console.WriteLine(speechResult);
                     // Console.WriteLine(speechResult);
 
                     mess = checkMessage(speechResult);
@@ -498,36 +499,82 @@ namespace MicrosoftProjectOxfordExample
         private string checkMessage(String mess)
         {
             mess = mess.ToLower();
-            switch (mess)
+
+            if(mess.Contains("top left."))
             {
-                case "top left.":
-                    markSpot("A1", Logic.currentToken);
-                    return "a1";
-                case "top.":
-                    markSpot("A2", Logic.currentToken);
-                    return "a2";
-                case "top right.":
-                    markSpot("A3", Logic.currentToken);
-                    return "a3";
-                case "left.":
-                    markSpot("B1", Logic.currentToken);
-                    return "b1";
-                case "middle.":
-                    markSpot("B2", Logic.currentToken);
-                    return "b2";
-                case "right.":
-                    markSpot("B3", Logic.currentToken);
-                    return "b3";
-                case "bottom left.":
-                    markSpot("C1", Logic.currentToken);
-                    return "c1";
-                case "bottom.":
-                    markSpot("C2", Logic.currentToken);
-                    return "c2";
-                case "bottom right.":
-                    markSpot("C3", Logic.currentToken);
-                    return "c3";
+                markSpot("A1", Logic.currentToken);
+                return "a1";
             }
+            else if (mess.Contains("top right."))
+            {
+                markSpot("A3", Logic.currentToken);
+                return "a3";
+            }
+            else if (mess.Contains("top."))
+            {
+                markSpot("A2", Logic.currentToken);
+                return "a2";
+            }
+            else if (mess.Contains("bottom left."))
+            {
+                markSpot("C1", Logic.currentToken);
+                return "c1";
+            }
+            else if (mess.Contains("bottom right."))
+            {
+                markSpot("C3", Logic.currentToken);
+                return "c3";
+            }
+            else if (mess.Contains("bottom."))
+            {
+                markSpot("C2", Logic.currentToken);
+                return "c2";
+            }
+            else if (mess.Contains("left."))
+            {
+                markSpot("B1", Logic.currentToken);
+                return "b1";
+            }
+            else if (mess.Contains("right."))
+            {
+                markSpot("B3", Logic.currentToken);
+                return "b3";
+            }
+            else if (mess.Contains("middle."))
+            {
+                markSpot("B2", Logic.currentToken);
+                return "b2";
+            }
+            //switch (mess)
+            //{
+            //    case "top left.":
+            //        markSpot("A1", Logic.currentToken);
+            //        return "a1";
+            //    case "top.":
+            //        markSpot("A2", Logic.currentToken);
+            //        return "a2";
+            //    case "top right.":
+            //        markSpot("A3", Logic.currentToken);
+            //        return "a3";
+            //    case "left.":
+            //        markSpot("B1", Logic.currentToken);
+            //        return "b1";
+            //    case "middle.":
+            //        markSpot("B2", Logic.currentToken);
+            //        return "b2";
+            //    case "right.":
+            //        markSpot("B3", Logic.currentToken);
+            //        return "b3";
+            //    case "bottom left.":
+            //        markSpot("C1", Logic.currentToken);
+            //        return "c1";
+            //    case "bottom.":
+            //        markSpot("C2", Logic.currentToken);
+            //        return "c2";
+            //    case "bottom right.":
+            //        markSpot("C3", Logic.currentToken);
+            //        return "c3";
+            //}
             return null;
         }
 
