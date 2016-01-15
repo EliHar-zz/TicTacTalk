@@ -38,7 +38,7 @@ using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
-
+using TTSSample;
 using Microsoft.ProjectOxford.SpeechRecognition;
 using System.IO.IsolatedStorage;
 using System.Runtime.CompilerServices;
@@ -359,12 +359,18 @@ namespace MicrosoftProjectOxfordExample
                             //Thread.Sleep(2000);
                             break;
                         }
-
+                        else
+                        {
+                            TTSSample.Program.sayThis("Please repeat your move.");
+                            break;
+                        }
                     }
                     else
                     {
                         Console.WriteLine("Say again...");
+                        TTSSample.Program.sayThis("Please repeat your move.");
                         openMic();
+                        break;
                     }
                 }
                 WriteLine();

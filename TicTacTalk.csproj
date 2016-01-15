@@ -74,6 +74,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="SpeechClient, Version=0.0.0.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\..\packages\Microsoft.ProjectOxford.SpeechRecognition-x64.0.4.9.1\lib\SpeechClient.dll</HintPath>
       <Private>True</Private>
@@ -91,6 +94,11 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="TTS\TTS.csproj">
+      <Project>{a3812f86-c096-4b83-aa4d-f8cbb2c3db7b}</Project>
+      <Name>TTS</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(_TargetsPath)\Microsoft.CSharp.targets" />
 </Project>

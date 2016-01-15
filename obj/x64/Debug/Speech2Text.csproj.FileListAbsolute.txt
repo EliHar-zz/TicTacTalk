@@ -13,3 +13,4 @@ C:\Users\t-elharo\Documents\NoBrailleNoProblem\speech_SpeechToText-SDK-Windows\s
 C:\Users\t-elharo\Documents\TicTacTalk\objd\amd64\SpeechToText-WPF-Sample.exe.config
 C:\Users\t-elharo\Documents\TicTacTalk\obj\x64\Debug\SpeechToText-WPF-Sample.exe
 C:\Users\t-elharo\Documents\TicTacTalk\obj\x64\Debug\SpeechToText-WPF-Sample.pdb
+C:\Users\t-chbian\Documents\Visual Studio 2015\TicTacTalk\objd\amd64\SpeechToText-WPF-Sample.exe.config
