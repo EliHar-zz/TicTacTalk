@@ -11,6 +11,7 @@ namespace SpeechToTextWPFSample
     {
         public static String message = null;
         public static char currentToken;
+        public static Boolean justSpoke = false;
         public void DoWork()
         {
 
@@ -76,6 +77,7 @@ namespace SpeechToTextWPFSample
 
                     Console.Write("\nEnter spot to mark: ");
                     TTSSample.Program.sayThis(players[i].getName()+"\'s turn");
+                    justSpoke = true;
                     //listen to tha talk
                     while (message==null)
                     {

@@ -328,7 +328,12 @@ namespace MicrosoftProjectOxfordExample
 
         private void WriteResponseResult(SpeechResponseEventArgs e)
         {
-
+            if (Logic.justSpoke == true)
+            {
+                Logic.justSpoke = false;
+                return;
+            }
+               
             if (e.PhraseResponse.Results.Length == 0)
             {
                 //// WriteLine("I didn't hear you...");
@@ -354,9 +359,11 @@ namespace MicrosoftProjectOxfordExample
                     }
                 }
 
-                if (mess != null)
+                if (mess == null)
                 {
-                    // WriteLine();
+                    TTSSample.Program.sayThis("Please repeat your move.");
+                    Logic.justSpoke = true;
+                    return;// WriteLine();
                 }
             }
         }
