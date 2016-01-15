@@ -1,0 +1,15 @@
+C:\Users\t-elharo\Documents\NoBrailleNoProblem\speech_SpeechToText-SDK-Windows\samples\SpeechRecognitionServiceExample\obj\x64\Debug\App.g.cs
+C:\Users\t-elharo\Documents\NoBrailleNoProblem\speech_SpeechToText-SDK-Windows\samples\SpeechRecognitionServiceExample\obj\x64\Debug\SpeechToText-WPF-Sample_MarkupCompile.cache
+C:\Users\t-elharo\Documents\NoBrailleNoProblem\speech_SpeechToText-SDK-Windows\samples\SpeechRecognitionServiceExample\objd\amd64\SpeechToText-WPF-Sample.exe.config
+C:\Users\t-elharo\Documents\NoBrailleNoProblem\speech_SpeechToText-SDK-Windows\samples\SpeechRecognitionServiceExample\objd\amd64\SpeechToText-WPF-Sample.exe
+C:\Users\t-elharo\Documents\NoBrailleNoProblem\speech_SpeechToText-SDK-Windows\samples\SpeechRecognitionServiceExample\objd\amd64\SpeechToText-WPF-Sample.pdb
+C:\Users\t-elharo\Documents\NoBrailleNoProblem\speech_SpeechToText-SDK-Windows\samples\SpeechRecognitionServiceExample\objd\amd64\SpeechClient.dll
+C:\Users\t-elharo\Documents\NoBrailleNoProblem\speech_SpeechToText-SDK-Windows\samples\SpeechRecognitionServiceExample\obj\x64\Debug\MainWindow.baml
+C:\Users\t-elharo\Documents\NoBrailleNoProblem\speech_SpeechToText-SDK-Windows\samples\SpeechRecognitionServiceExample\obj\x64\Debug\MainWindow.g.cs
+C:\Users\t-elharo\Documents\NoBrailleNoProblem\speech_SpeechToText-SDK-Windows\samples\SpeechRecognitionServiceExample\obj\x64\Debug\SpeechToText-WPF-Sample.g.resources
+C:\Users\t-elharo\Documents\NoBrailleNoProblem\speech_SpeechToText-SDK-Windows\samples\SpeechRecognitionServiceExample\obj\x64\Debug\SpeechToText-WPF-Sample.exe
+C:\Users\t-elharo\Documents\NoBrailleNoProblem\speech_SpeechToText-SDK-Windows\samples\SpeechRecognitionServiceExample\obj\x64\Debug\SpeechToText-WPF-Sample.pdb
+C:\Users\t-elharo\Documents\NoBrailleNoProblem\speech_SpeechToText-SDK-Windows\samples\SpeechRecognitionServiceExample\obj\x64\Debug\Speech2Text.csprojResolveAssemblyReference.cache
+C:\Users\t-elharo\Documents\TicTacTalk\objd\amd64\SpeechToText-WPF-Sample.exe.config
+C:\Users\t-elharo\Documents\TicTacTalk\obj\x64\Debug\SpeechToText-WPF-Sample.exe
+C:\Users\t-elharo\Documents\TicTacTalk\obj\x64\Debug\SpeechToText-WPF-Sample.pdb
